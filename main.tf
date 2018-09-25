@@ -19,14 +19,18 @@ resource "aws_lambda_function" "lambda_stream" {
   function_name     = "logdna_cloudwatch"
   handler           = "logdna_cloudwatch.lambda_handler"
   runtime           = "python2.7"
-  filename          = "${path.module}/lambda/stream_to_logdna.zip"  
+  filename          = "${path.module}/lambda/stream_to_logdna.zip"
   source_code_hash  = "${base64sha256(file("${path.module}/lambda/stream_to_logdna.zip"))}"
   role              = "${aws_iam_role.lambda_execute_role.arn}"
 
   environment {
     variables = {
       LOGDNA_KEY = "${var.log_dna_key}"
-    } 
+    }
+  }
+
+  lifecycle {
+    ignore_changes = ["filename", "last_modified"]
   }
 }
 
