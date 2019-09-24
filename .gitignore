@@ -1,5 +1,13 @@
+keys/*
+!keys/.gitkeep
+*.info
+/tmp/
+*tfstate*
+secrets.tfvars
+*.tfvars
 .terraform
-terraform.tfstate
-*.tfstate*
-terraform.tfvars
-lambda/stream_to_logdna/stream_to_logdna.zip
+.idea
+*.iml
+
+.build-harness
+build-harness
