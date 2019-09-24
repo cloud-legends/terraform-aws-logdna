@@ -18,7 +18,7 @@ resource "aws_iam_role_policy" "lambda_container_policy" {
 resource "aws_lambda_function" "lambda_stream" {
   function_name    = "logdna_cloudwatch"
   handler          = "logdna_cloudwatch.lambda_handler"
-  runtime          = "python2.7"
+  runtime          = "nodejs10.x"
   filename         = "${path.module}/lambda/stream_to_logdna.zip"
   source_code_hash = base64sha256(file("${path.module}/lambda/stream_to_logdna.zip"))
   role             = aws_iam_role.lambda_execute_role.arn
@@ -37,7 +37,7 @@ resource "aws_lambda_function" "lambda_stream" {
 resource "aws_lambda_permission" "allow_cloudwatch" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.lambda_stream.function_name
-  principal     = var.lambda_principal
+  principal     = "logs.${var.region}.amazonaws.com"
   source_arn    = var.log_group_arn
 }
 
