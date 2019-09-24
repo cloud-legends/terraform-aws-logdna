@@ -47,6 +47,7 @@ resource "aws_cloudwatch_log_subscription_filter" "test_lambdafunction_logfilter
   log_group_name  = "${var.log_group_name}"
   filter_pattern  = "${var.filter_pattern}"
   destination_arn = "${aws_lambda_function.lambda_stream.arn}"
+  distribution    = "ByLogStream"
 
   depends_on      = ["aws_lambda_permission.allow_cloudwatch"]
 }
