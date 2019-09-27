@@ -23,6 +23,7 @@ module "logdna" {
   version = "0.0.0"
 
   filter_pattern                    = "[host, ident, authuser, date, request, status, bytes]"
+  environment                       = "acceptance"
   log_group_name                    = "name-of-cloudwatch-log-group"
   log_subscription_filter_name      = "name-of-cloudwatch-subscription-filter"
   lambda_execute_role_name          = "lambda-execute-stream-role"
@@ -51,6 +52,7 @@ Available targets:
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | filter_pattern | A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events. | string | `[host, ident, authuser, date, request, status, bytes]` | no |
+| environment | The name of the current environment. (e.g acceptence, production) | string | `-` | yes |
 | log_group_name | The name of the log group to associate the subscription filter with. | string | `-` | yes |
 | lambda_execute_role_name | The name of the execution IAM role. | string | `-` | yes |
 | log_dna_key | LogDNA Ingestion Key. | string | `-` | yes |

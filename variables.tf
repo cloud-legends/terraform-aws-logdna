@@ -4,6 +4,11 @@ variable "filter_pattern" {
   default     = "[host, ident, authuser, date, request, status, bytes]"
 }
 
+variable "environment" {
+  type        = string
+  description = "The name of the current environment. (e.g acceptence, production)"
+}
+
 variable "log_group_name" {
   type        = string
   description = "The name of the log group to associate the subscription filter with"
