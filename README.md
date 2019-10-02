@@ -5,7 +5,7 @@
 
 
 Terraform module designed to forward AWS Cloudwatch Logs to LogDNA.
-The module subscribes to a Cloudwatch Logs Group. A Lambda function then forwards the logs to LogDNA
+The module subscribes to a Cloudwatch Logs Group. A Lambda function then forwards the logs to LogDNA.
 
 &nbsp;
 It's 100% Open Source and licensed under the [MIT](LICENSE) license.
