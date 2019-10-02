@@ -25,7 +25,7 @@ resource "aws_lambda_function" "lambda_stream" {
 
   environment {
     variables = {
-      LOGDNA_KEY = var.log_dna_key
+      LOGDNA_KEY  = var.log_dna_key
       ENVIRONMENT = var.environment
     }
   }
