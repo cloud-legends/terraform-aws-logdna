@@ -31,7 +31,7 @@ resource "aws_lambda_function" "lambda_stream" {
   }
 
   lifecycle {
-    ignore_changes = ["filename", "last_modified"]
+    ignore_changes = [filename, last_modified]
   }
 }
 
@@ -50,5 +50,5 @@ resource "aws_cloudwatch_log_subscription_filter" "test_lambdafunction_logfilter
   destination_arn = aws_lambda_function.lambda_stream.arn
   distribution    = "ByLogStream"
 
-  depends_on = ["aws_lambda_permission.allow_cloudwatch"]
+  depends_on = [aws_lambda_permission.allow_cloudwatch]
 }
