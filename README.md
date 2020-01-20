@@ -32,6 +32,7 @@ module "logdna" {
   log_group_arn                     = "arn-of-log-group"
   region                            = "eu-west-1"
   log_subscription_filter           = "logdna-cloudwatch"
+  application_name                  = "testapp"
 }
 ```
 
