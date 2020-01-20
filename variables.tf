@@ -36,6 +36,7 @@ variable "log_group_arn" {
 
 variable "region" {
   type        = string
+  default     = "eu-west-1"
   description = "The region in which the Cloudwatch Log Group is provisioned."
 }
 
