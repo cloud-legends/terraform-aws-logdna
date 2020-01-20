@@ -10,7 +10,7 @@ variable "environment" {
 }
 
 variable "application_name" {
-  type        = "string"
+  type        = string
   description = "The name of the application"
 }
 
