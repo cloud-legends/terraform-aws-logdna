@@ -9,6 +9,11 @@ variable "environment" {
   description = "The name of the current environment. (e.g acceptence, production)"
 }
 
+variable "application_name" {
+  type        = string
+  description = "The name of the application"
+}
+
 variable "log_group_name" {
   type        = string
   description = "The name of the log group to associate the subscription filter with"
@@ -31,6 +36,7 @@ variable "log_group_arn" {
 
 variable "region" {
   type        = string
+  default     = "eu-west-1"
   description = "The region in which the Cloudwatch Log Group is provisioned."
 }
 

@@ -27,6 +27,7 @@ resource "aws_lambda_function" "lambda_stream" {
     variables = {
       LOGDNA_KEY  = var.log_dna_key
       ENVIRONMENT = var.environment
+      APPLICATION_NAME = var.application_name
     }
   }
 
