@@ -72,7 +72,7 @@ None
 
 ## Share the Love 
 
-Like this project? Please give it a ★ on [our GitHub](https://github.com/kabisa/terraform-aws-logdna)! (it helps us **a lot**) 
+Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud-legends/terraform-aws-logdna)! (it helps us **a lot**) 
 
 Are you using this project or any of our other projects? Consider sharing this project: 
 [<img align="right" title="Share via Email" src="https://images.ctfassets.net/ede0ajjyowtx/6FgtYsQxQy42f81BV5NVLb/86ada33c42037504add9c7f668434217/ios-email.svg"/>][share_email]
@@ -86,7 +86,7 @@ Are you using this project or any of our other projects? Consider sharing this p
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/kabisa/terraform-aws-logdna/issues), or send us an [email][contact].
+File a GitHub [issue](https://github.com/cloud-legends/terraform-aws-logdna/issues), or send us an [email][contact].
 
 
 ## Support
@@ -103,7 +103,7 @@ Struggling with Terraform our just need an extra hand? Contact us  at:
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/kabisa/terraform-aws-logdna/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/cloud-legends/terraform-aws-logdna/issues) to report any bugs or file feature requests.
 
 ### Developing
 
