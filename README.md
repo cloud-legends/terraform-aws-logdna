@@ -10,7 +10,6 @@ The module subscribes to a Cloudwatch Logs Group. A Lambda function then forward
 &nbsp;
 It's 100% Open Source and licensed under the [MIT](LICENSE) license.
 
-
 ## Usage
 
 This project is available on the [Terraform Registry][terraform_registry_url]
@@ -36,19 +35,6 @@ module "logdna" {
 }
 ```
 
-
-
-
-## Makefile Targets
-```
-Available targets:
-
-  help                                Help screen
-  help/all                            Display help for all targets
-  help/short                          This help short screen
-  lint                                Lint terraform code
-
-```
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -62,13 +48,9 @@ Available targets:
 | region | The region in which the Cloudwatch Log Group is provisioned. | string | `-` | yes |
 | log_subscription_filter | The name for the Cloudwatch Log subscription filter. | string | `-` | yes |
 
-
 ## Outputs
 
 None
-
-
-
 
 ## Share the Love 
 
@@ -80,14 +62,11 @@ Are you using this project or any of our other projects? Consider sharing this p
 [<img align="right" title="Share on LinkedIn" src="https://images.ctfassets.net/ede0ajjyowtx/4YEBKx16jYGABWjhBmO0x3/d4384b9e3088d39ca6bd4b5d8ba8f6a0/social-linkedin.svg" />][share_linkedin]
 [<img align="right" title="Share on Facebook" src="https://images.ctfassets.net/ede0ajjyowtx/6NQy3vGRHYgTpi4geq6mVF/f3acf7286c7accb408e9deb8a0b6f4c2/social-facebook.svg" />][share_facebook]
 
-
-
 ## Help
 
 **Got a question?**
 
 File a GitHub [issue](https://github.com/cloud-legends/terraform-aws-logdna/issues), or send us an [email][contact].
-
 
 ## Support
 
@@ -96,8 +75,6 @@ At Kabisa we believe in the power of AWS in combination with Infrastructure as C
 Struggling with Terraform our just need an extra hand? Contact us  at:
 
 [![E-Mail](https://img.shields.io/badge/email-sales@kabisa.nl-blue.svg)](mailto:sales@kabisa.nl)
-
-
 
 ## Contributing
 
@@ -119,12 +96,9 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 **NOTE:** Be sure to merge the latest changes from "upstream" before making a pull request!
 
-
 ## Copyright
 
 Copyright © 2022 [Kabisa B.V][website]
-
-
 
 ## License 
 
@@ -141,7 +115,6 @@ All other trademarks referenced herein are the property of their respective owne
 This project is maintained and funded by [Kabisa B.V][website]. Like it? Please let us know by [leaving a comment][contact]!
 
 [<img src="https://d33wubrfki0l68.cloudfront.net/b729c8fe6370124874ce8831d102efd5a0296c43/0c62a/images/kabisa-logo-b729c8fe.svg" width="450" alt="Kabisa logo"/>][website]
-
 
 
   [logo]: https://d33wubrfki0l68.cloudfront.net/b729c8fe6370124874ce8831d102efd5a0296c43/0c62a/images/kabisa-logo-b729c8fe.svg
