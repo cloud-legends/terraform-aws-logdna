@@ -18,7 +18,7 @@ resource "aws_iam_role_policy" "lambda_container_policy" {
 resource "aws_lambda_function" "lambda_stream" {
   function_name    = "logdna_cloudwatch"
   handler          = "index.handler"
-  runtime          = "nodejs12.x"
+  runtime          = "nodejs16.x"
   filename         = "${path.module}/lambda/stream_to_logdna.zip"
   source_code_hash = filebase64sha256("${path.module}/lambda/stream_to_logdna.zip")
   role             = aws_iam_role.lambda_execute_role.arn
