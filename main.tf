@@ -1,5 +1,5 @@
 /* Lambda execution role */
-data "aws_iam_policy_document" "lambda_stream_role"{
+data "aws_iam_policy_document" "lambda_stream_role" {
   statement {
     actions = ["sts:AssumeRole"]
 
@@ -16,7 +16,7 @@ resource "aws_iam_role" "lambda_execute_role" {
   force_detach_policies = true
 }
 
-data "aws_iam_policy_document" "lambda_stream_policy"{
+data "aws_iam_policy_document" "lambda_stream_policy" {
   statement {
     actions = [
       "logs:CreateLogGroup",
