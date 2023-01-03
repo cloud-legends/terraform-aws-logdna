@@ -37,16 +37,16 @@ module "logdna" {
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| filter_pattern | A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events. | string | `[host, ident, authuser, date, request, status, bytes]` | no |
-| environment | The name of the current environment. (e.g acceptence, production) | string | `-` | yes |
-| log_group_name | The name of the log group to associate the subscription filter with. | string | `-` | yes |
-| lambda_execute_role_name | The name of the execution IAM role. | string | `-` | yes |
-| log_dna_key | LogDNA Ingestion Key. | string | `-` | yes |
-| log_group_arn | The ARN of the Cloudwatch Log Group for which to forward logs for. | string | `-` | yes |
-| region | The region in which the Cloudwatch Log Group is provisioned. | string | `-` | yes |
-| log_subscription_filter | The name for the Cloudwatch Log subscription filter. | string | `-` | yes |
+| Name                     | Description                                                                                |  Type  |                         Default                         | Required |
+|--------------------------|--------------------------------------------------------------------------------------------|:------:|:-------------------------------------------------------:|:--------:|
+| filter_pattern           | A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events. | string | `[host, ident, authuser, date, request, status, bytes]` |    no    |
+| environment              | The name of the current environment. (e.g acceptence, production)                          | string |                           `-`                           |   yes    |
+| log_group_name           | The name of the log group to associate the subscription filter with.                       | string |                           `-`                           |   yes    |
+| lambda_execute_role_name | The name of the execution IAM role.                                                        | string |                           `-`                           |   yes    |
+| log_dna_key              | LogDNA Ingestion Key.                                                                      | string |                           `-`                           |   yes    |
+| log_group_arn            | The ARN of the Cloudwatch Log Group for which to forward logs for.                         | string |                           `-`                           |   yes    |
+| region                   | The region in which the Cloudwatch Log Group is provisioned.                               | string |                           `-`                           |   yes    |
+| log_subscription_filter  | The name for the Cloudwatch Log subscription filter.                                       | string |                           `-`                           |   yes    |
 
 ## Outputs
 
