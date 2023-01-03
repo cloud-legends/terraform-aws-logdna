@@ -1,17 +1,35 @@
 /* Lambda execution role */
+data "aws_iam_policy_document" "lambda_stream_role" {
+  statement {
+    actions = ["sts:AssumeRole"]
+
+    principals {
+      type        = "Service"
+      identifiers = ["lambda.amazonaws.com"]
+    }
+  }
+}
+
 resource "aws_iam_role" "lambda_execute_role" {
   name                  = var.lambda_execute_role_name
-  assume_role_policy    = file("${path.module}/policy/logdna_lambda_stream_role.json")
+  assume_role_policy    = data.aws_iam_policy_document.lambda_stream_role.json
   force_detach_policies = true
 }
 
-data "template_file" "lambda_stream_policy" {
-  template = file("${path.module}/policy/logdna_lambda_stream_policy.json")
+data "aws_iam_policy_document" "lambda_stream_policy" {
+  statement {
+    actions = [
+      "logs:CreateLogGroup",
+      "logs:CreateLogStream",
+      "logs:PutLogEvents"
+    ]
+    resources = ["arn:aws:logs:*:*:*"]
+  }
 }
 
 resource "aws_iam_role_policy" "lambda_container_policy" {
   role   = aws_iam_role.lambda_execute_role.id
-  policy = data.template_file.lambda_stream_policy.rendered
+  policy = data.aws_iam_policy_document.lambda_stream_policy.json
 }
 
 /* Lambda function */
