@@ -14,7 +14,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: terraform fmt
-        uses: dflook/terraform-fmt@v1
+        uses: dflook/terraform-fmt@v3
 
       - name: Create commit
         uses: EndBug/add-and-commit@v9
